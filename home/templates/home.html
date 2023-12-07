@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+<script src="{% static 'scripts/base.js' %}"></script>
+<script src="{% static 'scripts/csrf.js' %}"></script>
+<script src="{% static 'scripts/home.js' %}"></script>
+{% endblock %}
+
+{% block main_content %}
+
+<div class="authentication">
+
+    <span>Enter Your Aadhar Card Number (UIDAI Number)</span>
+    <br>
+    <div class="input-section">
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="xxxx xxxx xxxx" class="input-text" name="aadhar" autocomplete="off">
+            <button type="submit" hx-post="{% url 'authentication' %}" hx-target="#main-content" hx-trigger="click"
+                class="btn btn-primary">Authenticate</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
