@@ -1,3 +1,5 @@
-Django
+Django==5.0.2
 pycryptodome
 djlint
+
+

@@ -34,7 +34,7 @@
 
         {% for block in blocks %}
         <tr id="{{ block.id }}">
-            <td> <a class="block-info-link" href="/block-info/?id={{block.id}}"> {{ block.id }} </a> </td>
+            <td> <a class="block-info-link" href="/block-info?id={{block.id}}"> {{ block.id }} </a> </td>
             <td title="{{ block.prev_hash }}" style="color: rgb(78, 0, 151);">{{ block.prev_hash }}</td>
             <td title="{{ block.merkle_hash }}" style="color: rgb(133, 0, 151);">{{ block.merkle_hash }}</td>
             <td title="{{ block.this_hash }}" style="color: rgb(151, 0, 113);">{{ block.this_hash }}</td>

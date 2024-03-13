@@ -8,7 +8,7 @@
     </tr>
     {% for r in result %}
     <tr>
-        <td><a class="block-info-link" href="/block-info/?id={{r.block_id}}"> {{ r.block_id }} </a></td>
+        <td><a class="block-info-link" href="/block-info?id={{r.block_id}}"> {{ r.block_id }} </a></td>
         <td title="{{ r.prev_hash }}" style="color: rgb(78, 0, 151);">{{ r.prev_hash }}</td>
         <td title="{{ r.merkle_hash }}" style="color: rgb(133, 0, 151);">{{ r.merkle_hash }}</td>
         <td title="{{ r.this_hash }}" style="color: rgb(151, 0, 113);">{{ r.this_hash }}</td>

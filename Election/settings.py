@@ -76,8 +76,12 @@ WSGI_APPLICATION = "Election.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "bc",
+        "HOST": "",
+        "PORT": 5432,
+        "USERNAME": "",
+        "PASSWORD": ""
     }
 }
 
@@ -120,8 +124,8 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-EMAIL_ADDRESS = ""
-EMAIL_PASSWORD = ""
+EMAIL_ADDRESS = "botibha@gmail.com"
+EMAIL_PASSWORD = "gizsnbgllqlqhckh"
 TRANSACTIONS_PER_BLOCK = 1
 
 # PUZZLE

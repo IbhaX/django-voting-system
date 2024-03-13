@@ -96,7 +96,6 @@ class PartyForm(forms.ModelForm):
 
         for field_name in fields_to_style:
             self.fields[field_name].widget.attrs["class"] = "form-control"
-            self.fields[field_name].widget.attrs[
-                "placeholder"
-            ] = f"{' '.join(field_name.split("_")).title()}"
+            self.fields[field_name].widget.attrs["placeholder"] = f"{' '.join(field_name.split("_")).title()}"
             self.fields[field_name].label = ""
+
